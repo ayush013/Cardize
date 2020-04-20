@@ -36,7 +36,7 @@
 		var url = DOMURL.createObjectURL(svg); 
 		var img = new Image(); 
 		img.onload = function(){ 
-			ctx.drawImage(img,0,0,500,300); 
+			ctx.drawImage(img,a,b,500,300); 
 			DOMURL.revokeObjectURL(url);
 		};
 		img.src = url;
@@ -91,6 +91,9 @@
 		var canvas = document.getElementById('canvas');
 		var ctx = canvas.getContext('2d');
 		
+		var a = $('#namesvg').offset().left - $('#previewdiv').offset().left;
+		var b = $('#namesvg').offset().top - $('#previewdiv').offset().top;
+
 		
 		// define svgdocument and make blob containing its data
 		var svgDoc = document.getElementById('namesvg').getSVGDocument();
@@ -101,7 +104,7 @@
 		var url = DOMURL.createObjectURL(svg); 
 		var img = new Image(); 
 		img.onload = function(){ 
-			ctx.drawImage(img,0,0,500,25); 
+			ctx.drawImage(img,0,0,500,35); 
 			DOMURL.revokeObjectURL(url);
 		};
 		img.src = url;
@@ -112,7 +115,9 @@
 		var canvas = document.getElementById('canvas');
 		var ctx = canvas.getContext('2d');
 		
-		
+		var a = $('#designationsvg').offset().left - $('#previewdiv').offset().left;
+		var b = $('#designationsvg').offset().top - $('#previewdiv').offset().top;
+
 		// define svgdocument and make blob containing its data
 		var svgDoc = document.getElementById('designationsvg').getSVGDocument();
 		var svg = new Blob([svgDoc.lastChild.outerHTML], {type: 'image/svg+xml;charset=utf-8'});
@@ -122,7 +127,7 @@
 		var url = DOMURL.createObjectURL(svg); 
 		var img = new Image(); 
 		img.onload = function(){ 
-			ctx.drawImage(img,0,0,500,20); 
+			ctx.drawImage(img,a,b,500,25); 
 			DOMURL.revokeObjectURL(url);
 		};
 		img.src = url;
@@ -132,7 +137,10 @@
 		// create a canvas and context
 		var canvas = document.getElementById('canvas');
 		var ctx = canvas.getContext('2d');
-		
+
+		var a = $('#cnamesvg').offset().left - $('#previewdiv').offset().left;
+		var b = $('#cnamesvg').offset().top - $('#previewdiv').offset().top;
+
 		
 		// define svgdocument and make blob containing its data
 		var svgDoc = document.getElementById('cnamesvg').getSVGDocument();
@@ -143,7 +151,7 @@
 		var url = DOMURL.createObjectURL(svg); 
 		var img = new Image(); 
 		img.onload = function(){ 
-			ctx.drawImage(img,0,0,500,20); 
+			ctx.drawImage(img,a,b,500,25); 
 			DOMURL.revokeObjectURL(url);
 		};
 		img.src = url;
@@ -153,7 +161,9 @@
 		// create a canvas and context
 		var canvas = document.getElementById('canvas');
 		var ctx = canvas.getContext('2d');
-		
+
+		var a = $('#contactsvg').offset().left - $('#previewdiv').offset().left;
+		var b = $('#contactsvg').offset().top - $('#previewdiv').offset().top;
 		
 		// define svgdocument and make blob containing its data
 		var svgDoc = document.getElementById('contactsvg').getSVGDocument();
@@ -164,7 +174,7 @@
 		var url = DOMURL.createObjectURL(svg); 
 		var img = new Image(); 
 		img.onload = function(){ 
-			ctx.drawImage(img,0,0,500,10); 
+			ctx.drawImage(img,a,b,500,15); 
 			DOMURL.revokeObjectURL(url);
 		};
 		img.src = url;
@@ -175,7 +185,9 @@
 		var canvas = document.getElementById('canvas');
 		var ctx = canvas.getContext('2d');
 		
-		
+		var a = $('#emailsvg').offset().left - $('#previewdiv').offset().left;
+		var b = $('#emailsvg').offset().top - $('#previewdiv').offset().top;
+			
 		// define svgdocument and make blob containing its data
 		var svgDoc = document.getElementById('emailsvg').getSVGDocument();
 		var svg = new Blob([svgDoc.lastChild.outerHTML], {type: 'image/svg+xml;charset=utf-8'});
@@ -185,7 +197,7 @@
 		var url = DOMURL.createObjectURL(svg); 
 		var img = new Image(); 
 		img.onload = function(){ 
-			ctx.drawImage(img,0,0,500,10); 
+			ctx.drawImage(img,a,b,500,20); 
 			DOMURL.revokeObjectURL(url);
 		};
 		img.src = url;
